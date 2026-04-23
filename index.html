@@ -1334,6 +1334,9 @@ async function handleFormSubmit(e) {
   if (res.ok) {
     btn.textContent = '[ MESSAGE SENT ✓ ]';
     btn.style.borderColor = 'var(--accent)';
+    form.querySelector('input[name="name"]').value = '';
+    form.querySelector('input[name="email"]').value = '';
+    form.querySelector('textarea[name="message"]').value = '';
   } else {
     btn.textContent = '[ ERROR — TRY AGAIN ]';
     btn.style.borderColor = '#ff5f57';
