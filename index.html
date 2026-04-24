@@ -352,9 +352,10 @@
   .photo-zone::after {
     content: '';
     position: absolute;
-    inset: 0;
-    border: 1px solid transparent;
-    transition: border-color 0.3s;
+    inset: -8px;
+    border-radius: 0;
+    border: none;
+    pointer-events: none;
   }
 
   .about-bio h3 {
@@ -800,6 +801,55 @@
     .hero-meta { gap: 1rem; }
     .hero-name { font-size: clamp(2.5rem, 14vw, 5rem); }
   }
+
+  /* ─── PHOTO ORBIT ANIMATION ─── */
+  .photo-orbit {
+    position: absolute;
+    inset: -16px;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .orbit-ring {
+    position: absolute;
+    inset: 0;
+    border: 1px solid transparent;
+  }
+
+  .orbit-ring::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 45%;
+    background: linear-gradient(to bottom, var(--accent), transparent);
+    box-shadow: 0 0 8px var(--accent-glow);
+    animation: orbit-cw 3s linear infinite;
+    transform-origin: bottom center;
+  }
+
+  .orbit-ring::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 45%;
+    background: linear-gradient(to top, rgba(0,255,159,0.5), transparent);
+    animation: orbit-ccw 3s linear infinite;
+    transform-origin: top center;
+  }
+  
+  @keyframes orbit-cw {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+  @keyframes orbit-ccw {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(-360deg); }
+  }
 </style>
 </head>
 <body>
@@ -851,6 +901,7 @@
     <div class="about-grid">
       <div>
         <div class="photo-zone" id="photoZone">
+          <div class="photo-orbit"><div class="orbit-ring"></div></div>
           <img id="profilePhoto" src="./assets/images/profile.jpeg" alt="DNA" style="display:block">
           <svg class="photo-icon" style="display:none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
           <div class="placeholder-text" style="display:none">
