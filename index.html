@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DNA — Data & AI Automation Engineer</title>
+<title>Dan Nyarkoh Andoh — Data & AI Automation Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -825,7 +825,7 @@
     <div class="hero-prompt">SYSTEM ONLINE — DATA &amp; AI AUTOMATION</div>
     <h1 class="hero-name"><span class="accent">D</span>N<span class="accent">A</span></h1>
     <div class="hero-role">
-      <span class="highlight">Data &amp; AI Automation Engineer</span> / Assin Darmang, Ghana 🇬🇭
+      <span class="highlight">Dan Nyarkoh Andoh</span> · Data &amp; AI Automation Engineer / Accra, Ghana 🇬🇭
     </div>
     <p class="hero-tagline">
       Building intelligent pipelines, automating workflows, and deploying AI systems that operate at scale.<span class="cursor"></span>
@@ -851,9 +851,9 @@
     <div class="about-grid">
       <div>
         <div class="photo-zone" id="photoZone">
-          <img id="profilePhoto" src="/assets/images/profile.jpg" alt="DNA" style="display:block;">
-          <svg class="photo-icon" style="display:none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
-          <div class="placeholder-text" style="display:none;">
+          <img id="profilePhoto" src="" alt="DNA">
+          <svg class="photo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
+          <div class="placeholder-text">
             // photo_placeholder<br>
             drop image here<br>
             or click to upload
@@ -864,7 +864,7 @@
       <div class="about-bio">
         <h3>$ whoami</h3>
         <p>
-          I'm <strong>DNA</strong> — a Data &amp; AI Automation Engineer based in <strong>Assin Darmang, Ghana</strong>, engineering the intersection of data pipelines and intelligent automation.
+          I'm <strong>Dan Nyarkoh Andoh</strong> — a Data &amp; AI Automation Engineer based in <strong>Accra, Ghana</strong>, engineering the intersection of data pipelines and intelligent automation.
         </p>
         <p>
           My work centers on architecting <strong>self-hosted AI automation systems</strong> with n8n, integrating LLMs like Google Gemini, Claude, and local Ollama models into production-grade workflows, and building the data infrastructure that makes it all reliable.
@@ -1114,15 +1114,15 @@
       <div class="contact-form">
         <div class="form-group">
           <label class="form-label">Name</label>
-          <input type="text" class="form-input" placeholder="Your name" name="name">
+          <input type="text" class="form-input" placeholder="Your name">
         </div>
         <div class="form-group">
           <label class="form-label">Email</label>
-          <input type="email" class="form-input" placeholder="your@email.com" name="email">
+          <input type="email" class="form-input" placeholder="your@email.com">
         </div>
         <div class="form-group">
           <label class="form-label">Message</label>
-          <textarea class="form-textarea" placeholder="What's on your mind?" name="message"></textarea>
+          <textarea class="form-textarea" placeholder="What's on your mind?"></textarea>
         </div>
         <button class="btn" onclick="handleFormSubmit(event)">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
@@ -1135,8 +1135,8 @@
 
 <!-- ─── FOOTER ─── -->
 <footer>
-  <div class="footer-text">// <span>DNA</span> — Data &amp; AI Automation Engineer — Accra, Ghana 🇬🇭</div>
-  <div class="footer-text">Built with <span>precision</span> &amp; vanilla JS</div>
+  <div class="footer-text">// <span>DNA</span> — Dan Nyarkoh Andoh · Data &amp; AI Automation Engineer — Accra, Ghana 🇬🇭</div>
+
 </footer>
 
 <!-- ─── MODAL ─── -->
@@ -1313,34 +1313,17 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ─── FORM ───
-async function handleFormSubmit(e) {
+function handleFormSubmit(e) {
   e.preventDefault();
   const btn = e.target;
-  const form = btn.closest('section').querySelector('.contact-form');
-  const data = {
-    name: form.querySelector('input[name="name"]').value,
-    email: form.querySelector('input[name="email"]').value,
-    message: form.querySelector('textarea[name="message"]').value,
-  };
-
-  btn.textContent = '[ SENDING... ]';
-
-  const res = await fetch('https://formspree.io/f/mbdqqqjb', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-    body: JSON.stringify(data)
-  });
-
-  if (res.ok) {
-    btn.textContent = '[ MESSAGE SENT ✓ ]';
-    btn.style.borderColor = 'var(--accent)';
-    form.querySelector('input[name="name"]').value = '';
-    form.querySelector('input[name="email"]').value = '';
-    form.querySelector('textarea[name="message"]').value = '';
-  } else {
-    btn.textContent = '[ ERROR — TRY AGAIN ]';
-    btn.style.borderColor = '#ff5f57';
-  }
+  btn.textContent = '[ MESSAGE SENT ✓ ]';
+  btn.style.borderColor = 'var(--accent)';
+  btn.style.background = 'var(--accent-dim)';
+  setTimeout(() => {
+    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message';
+    btn.style.borderColor = '';
+    btn.style.background = '';
+  }, 3000);
 }
 </script>
 </body>
