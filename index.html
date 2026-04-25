@@ -37,7 +37,6 @@
     overflow-x: hidden;
   }
 
-  /* ─── GRID BACKGROUND ─── */
   body::before {
     content: '';
     position: fixed;
@@ -50,7 +49,6 @@
     z-index: 0;
   }
 
-  /* ─── NAVBAR ─── */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -112,11 +110,7 @@
     transition: all 0.3s;
   }
 
-  /* ─── SECTIONS ─── */
-  section {
-    position: relative;
-    z-index: 1;
-  }
+  section { position: relative; z-index: 1; }
 
   .container {
     max-width: 1100px;
@@ -145,7 +139,6 @@
     border-bottom: 1px solid var(--border);
   }
 
-  /* ─── BUTTONS ─── */
   .btn {
     display: inline-flex;
     align-items: center;
@@ -180,7 +173,6 @@
     color: var(--accent);
   }
 
-  /* ─── HERO ─── */
   #hero {
     min-height: 100vh;
     display: flex;
@@ -194,6 +186,8 @@
     margin: 0 auto;
     padding: 4rem 2rem;
     width: 100%;
+    position: relative;
+    z-index: 1;
   }
 
   .hero-prompt {
@@ -267,11 +261,7 @@
     50% { opacity: 0; }
   }
 
-  .hero-cta {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
+  .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
 
   .hero-meta {
     margin-top: 4rem;
@@ -289,7 +279,6 @@
 
   .hero-meta-item span { color: var(--accent); }
 
-  /* ─── PARTICLES ─── */
   #particles {
     position: absolute;
     inset: 0;
@@ -298,9 +287,6 @@
     overflow: hidden;
   }
 
-  .hero-inner { position: relative; z-index: 1; }
-
-  /* ─── ABOUT ─── */
   #about {
     padding: 7rem 0;
     background: var(--surface);
@@ -349,15 +335,6 @@
     opacity: 0.4;
   }
 
-  .photo-zone::after {
-    content: '';
-    position: absolute;
-    inset: -8px;
-    border-radius: 0;
-    border: none;
-    pointer-events: none;
-  }
-
   .about-bio h3 {
     font-family: var(--mono);
     font-size: 1.1rem;
@@ -403,10 +380,7 @@
     transition: border-color 0.2s, color 0.2s;
   }
 
-  .tag:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-  }
+  .tag:hover { border-color: var(--accent); color: var(--accent); }
 
   .tag.accent {
     border-color: rgba(0,255,159,0.3);
@@ -414,7 +388,6 @@
     background: var(--accent-dim);
   }
 
-  /* ─── PROJECTS ─── */
   #projects { padding: 7rem 0; }
 
   .filter-bar {
@@ -514,7 +487,6 @@
 
   .project-link:hover { opacity: 0.7; }
 
-  /* ─── CREDENTIALS ─── */
   #credentials {
     padding: 7rem 0;
     background: var(--surface);
@@ -564,10 +536,7 @@
     margin-bottom: 1.25rem;
   }
 
-  .cert-actions {
-    display: flex;
-    gap: 0.75rem;
-  }
+  .cert-actions { display: flex; gap: 0.75rem; }
 
   .cert-btn {
     font-family: var(--mono);
@@ -586,10 +555,7 @@
     transition: all 0.2s;
   }
 
-  .cert-btn:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-  }
+  .cert-btn:hover { border-color: var(--accent); color: var(--accent); }
 
   .doc-buttons {
     display: flex;
@@ -599,7 +565,6 @@
     border-top: 1px solid var(--border);
   }
 
-  /* ─── MODAL ─── */
   .modal-overlay {
     position: fixed;
     inset: 0;
@@ -635,28 +600,10 @@
   }
 
   .modal-close:hover { color: var(--accent); }
+  .modal-title { font-family: var(--mono); font-size: 1rem; color: var(--text); margin-bottom: 0.5rem; }
+  .modal-sub { font-family: var(--mono); font-size: 0.72rem; color: var(--accent); margin-bottom: 1.5rem; }
+  .modal-body { font-size: 0.875rem; color: var(--muted); line-height: 1.7; }
 
-  .modal-title {
-    font-family: var(--mono);
-    font-size: 1rem;
-    color: var(--text);
-    margin-bottom: 0.5rem;
-  }
-
-  .modal-sub {
-    font-family: var(--mono);
-    font-size: 0.72rem;
-    color: var(--accent);
-    margin-bottom: 1.5rem;
-  }
-
-  .modal-body {
-    font-size: 0.875rem;
-    color: var(--muted);
-    line-height: 1.7;
-  }
-
-  /* ─── CONTACT ─── */
   #contact { padding: 7rem 0; }
 
   .contact-grid {
@@ -683,26 +630,16 @@
     border-bottom: 1px solid var(--border);
   }
 
-  .dot {
-    width: 10px; height: 10px;
-    border-radius: 50%;
-  }
-
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
   .dot-red { background: #FF5F57; }
   .dot-yellow { background: #FEBC2E; }
   .dot-green { background: #28C840; }
 
-  .terminal-line {
-    color: var(--muted);
-    margin-bottom: 0.4rem;
-    line-height: 1.6;
-  }
-
+  .terminal-line { color: var(--muted); margin-bottom: 0.4rem; line-height: 1.6; }
   .terminal-line .cmd { color: var(--accent); }
   .terminal-line .val { color: var(--text); }
 
   .contact-form { display: flex; flex-direction: column; gap: 1rem; }
-
   .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
 
   .form-label {
@@ -759,7 +696,6 @@
     background: var(--accent-dim);
   }
 
-  /* ─── FOOTER ─── */
   footer {
     position: relative;
     z-index: 1;
@@ -772,15 +708,9 @@
     gap: 1rem;
   }
 
-  .footer-text {
-    font-family: var(--mono);
-    font-size: 0.7rem;
-    color: var(--muted);
-  }
-
+  .footer-text { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); }
   .footer-text span { color: var(--accent); }
 
-  /* ─── MOBILE ─── */
   @media (max-width: 768px) {
     .nav-links { display: none; }
     .nav-links.open {
@@ -801,60 +731,10 @@
     .hero-meta { gap: 1rem; }
     .hero-name { font-size: clamp(2.5rem, 14vw, 5rem); }
   }
-
-  /* ─── PHOTO ORBIT ANIMATION ─── */
-  .photo-orbit {
-    position: absolute;
-    inset: -16px;
-    pointer-events: none;
-    z-index: 2;
-  }
-
-  .orbit-ring {
-    position: absolute;
-    inset: 0;
-    border: 1px solid transparent;
-  }
-
-  .orbit-ring::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 45%;
-    background: linear-gradient(to bottom, var(--accent), transparent);
-    box-shadow: 0 0 8px var(--accent-glow);
-    animation: orbit-cw 3s linear infinite;
-    transform-origin: bottom center;
-  }
-
-  .orbit-ring::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 45%;
-    background: linear-gradient(to top, rgba(0,255,159,0.5), transparent);
-    animation: orbit-ccw 3s linear infinite;
-    transform-origin: top center;
-  }
-  
-  @keyframes orbit-cw {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
-  }
-
-  @keyframes orbit-ccw {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(-360deg); }
-  }
 </style>
 </head>
 <body>
 
-<!-- ─── NAVBAR ─── -->
 <nav>
   <a href="#hero" class="nav-logo">DNA</a>
   <ul class="nav-links" id="navLinks">
@@ -868,7 +748,6 @@
   </button>
 </nav>
 
-<!-- ─── HERO ─── -->
 <section id="hero">
   <canvas id="particles"></canvas>
   <div class="hero-inner">
@@ -893,7 +772,6 @@
   </div>
 </section>
 
-<!-- ─── ABOUT ─── -->
 <section id="about">
   <div class="container">
     <div class="section-label">About</div>
@@ -901,71 +779,36 @@
     <div class="about-grid">
       <div>
         <div class="photo-zone" id="photoZone">
-          <div class="photo-orbit"><div class="orbit-ring"></div></div>
           <img id="profilePhoto" src="./assets/images/profile.jpeg" alt="DNA" style="display:block">
           <svg class="photo-icon" style="display:none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
           <div class="placeholder-text" style="display:none">
-            // photo_placeholder<br>
-            drop image here<br>
-            or click to upload
+            // photo_placeholder<br>drop image here<br>or click to upload
           </div>
         </div>
         <input type="file" id="photoInput" accept="image/*" style="display:none">
       </div>
       <div class="about-bio">
         <h3>$ whoami</h3>
-        <p>
-          I'm <strong>Dan Nyarkoh Andoh</strong> — a Data &amp; AI Automation Engineer based in <strong>Accra, Ghana</strong>, engineering the intersection of data pipelines and intelligent automation.
-        </p>
-        <p>
-          My work centers on architecting <strong>self-hosted AI automation systems</strong> with n8n, integrating LLMs like Google Gemini, Claude, and local Ollama models into production-grade workflows, and building the data infrastructure that makes it all reliable.
-        </p>
-        <p>
-          On the data side, I work with <strong>PostgreSQL</strong>, Python (pandas, sqlalchemy), and complex SQL to extract meaning from large datasets. I run my automation stack on <strong>Docker + Ubuntu 24.04</strong>, managing everything from Bash scripts to OAuth2 flows.
-        </p>
-        <p>
-          Currently expanding into Europe — learning <strong>Deutsch 🇩🇪</strong> and <strong>Français 🇫🇷</strong> with the goal of building my career in <strong>Germany or Switzerland</strong>.
-        </p>
-
+        <p>I'm <strong>Dan Nyarkoh Andoh</strong> — a Data &amp; AI Automation Engineer based in <strong>Accra, Ghana</strong>, engineering the intersection of data pipelines and intelligent automation.</p>
+        <p>My work centers on architecting <strong>self-hosted AI automation systems</strong> with n8n, integrating LLMs like Google Gemini, Claude, and local Ollama models into production-grade workflows, and building the data infrastructure that makes it all reliable.</p>
+        <p>On the data side, I work with <strong>PostgreSQL</strong>, Python (pandas, sqlalchemy), and complex SQL to extract meaning from large datasets. I run my automation stack on <strong>Docker + Ubuntu 24.04</strong>, managing everything from Bash scripts to OAuth2 flows.</p>
+        <p>Currently expanding into Europe — learning <strong>Deutsch 🇩🇪</strong> and <strong>Français 🇫🇷</strong> with the goal of building my career in <strong>Germany or Switzerland</strong>.</p>
         <div class="skills-section">
           <div class="skills-label">AI Automation</div>
           <div class="tags">
-            <span class="tag accent">n8n</span>
-            <span class="tag accent">AI Agents</span>
-            <span class="tag">LLM Integration</span>
-            <span class="tag">Webhooks</span>
-            <span class="tag">OAuth2</span>
-            <span class="tag">Cron Jobs</span>
-            <span class="tag">Google Gemini</span>
-            <span class="tag">Ollama</span>
-            <span class="tag">Claude</span>
+            <span class="tag accent">n8n</span><span class="tag accent">AI Agents</span><span class="tag">LLM Integration</span><span class="tag">Webhooks</span><span class="tag">OAuth2</span><span class="tag">Cron Jobs</span><span class="tag">Google Gemini</span><span class="tag">Ollama</span><span class="tag">Claude</span>
           </div>
-
           <div class="skills-label">Data Engineering</div>
           <div class="tags">
-            <span class="tag accent">PostgreSQL</span>
-            <span class="tag">DDL / DML / DQL</span>
-            <span class="tag">JOINs</span>
-            <span class="tag">Row-Level Functions</span>
-            <span class="tag">Python</span>
-            <span class="tag">pandas</span>
-            <span class="tag">sqlalchemy</span>
-            <span class="tag">JavaScript</span>
+            <span class="tag accent">PostgreSQL</span><span class="tag">DDL / DML / DQL</span><span class="tag">JOINs</span><span class="tag">Row-Level Functions</span><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">sqlalchemy</span><span class="tag">JavaScript</span>
           </div>
-
           <div class="skills-label">DevOps</div>
           <div class="tags">
-            <span class="tag accent">Docker</span>
-            <span class="tag">Linux Ubuntu 24.04</span>
-            <span class="tag">Git &amp; GitHub</span>
-            <span class="tag">Bash Scripting</span>
+            <span class="tag accent">Docker</span><span class="tag">Linux Ubuntu 24.04</span><span class="tag">Git &amp; GitHub</span><span class="tag">Bash Scripting</span>
           </div>
-
           <div class="skills-label">Languages</div>
           <div class="tags">
-            <span class="tag accent">English</span>
-            <span class="tag">Deutsch 🇩🇪 (Learning)</span>
-            <span class="tag">Français 🇫🇷 (Learning)</span>
+            <span class="tag accent">English</span><span class="tag">Deutsch 🇩🇪 (Learning)</span><span class="tag">Français 🇫🇷 (Learning)</span>
           </div>
         </div>
       </div>
@@ -973,34 +816,21 @@
   </div>
 </section>
 
-<!-- ─── PROJECTS ─── -->
 <section id="projects">
   <div class="container">
     <div class="section-label">Projects</div>
     <h2 class="section-title">Built by DNA_</h2>
-
     <div class="filter-bar">
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="ai-automation">AI Automation</button>
       <button class="filter-btn" data-filter="data-engineering">Data Engineering</button>
     </div>
-
     <div class="projects-grid">
-
-      <!-- Project 1 -->
       <div class="project-card" data-cat="ai-automation">
         <div class="project-cat">AI Automation</div>
         <div class="project-name">IT Motivational Quotes Automation</div>
-        <div class="project-desc">
-          Automated pipeline that generates unique IT-themed motivational quotes via Google Gemini, delivers them to a subscriber list via Gmail. Subscriber management handled through Google Sheets integration.
-        </div>
-        <div class="tags">
-          <span class="tag">n8n</span>
-          <span class="tag">Google Gemini</span>
-          <span class="tag">Gmail API</span>
-          <span class="tag">Google Sheets</span>
-          <span class="tag">Cron</span>
-        </div>
+        <div class="project-desc">Automated pipeline that generates unique IT-themed motivational quotes via Google Gemini, delivers them to a subscriber list via Gmail. Subscriber management handled through Google Sheets integration.</div>
+        <div class="tags"><span class="tag">n8n</span><span class="tag">Google Gemini</span><span class="tag">Gmail API</span><span class="tag">Google Sheets</span><span class="tag">Cron</span></div>
         <div class="project-footer">
           <a href="https://github.com/99-dn" target="_blank" class="project-link">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
@@ -1008,21 +838,11 @@
           </a>
         </div>
       </div>
-
-      <!-- Project 2 -->
       <div class="project-card" data-cat="ai-automation">
         <div class="project-cat">AI Automation</div>
         <div class="project-name">Weather Report Automation</div>
-        <div class="project-desc">
-          Fetches real-time weather data for Ghana cities via OpenWeatherMap API, uses a Google Gemini AI Agent to generate a friendly morning weather narrative, and delivers it via Gmail every day at 07:00 AM.
-        </div>
-        <div class="tags">
-          <span class="tag">n8n</span>
-          <span class="tag">OpenWeatherMap</span>
-          <span class="tag">Google Gemini</span>
-          <span class="tag">Gmail API</span>
-          <span class="tag">Docker</span>
-        </div>
+        <div class="project-desc">Fetches real-time weather data for Ghana cities via OpenWeatherMap API, uses a Google Gemini AI Agent to generate a friendly morning weather narrative, and delivers it via Gmail every day at 07:00 AM.</div>
+        <div class="tags"><span class="tag">n8n</span><span class="tag">OpenWeatherMap</span><span class="tag">Google Gemini</span><span class="tag">Gmail API</span><span class="tag">Docker</span></div>
         <div class="project-footer">
           <a href="https://github.com/99-dn" target="_blank" class="project-link">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
@@ -1030,21 +850,11 @@
           </a>
         </div>
       </div>
-
-      <!-- Project 3 -->
       <div class="project-card" data-cat="data-engineering">
         <div class="project-cat">Data Engineering</div>
         <div class="project-name">E-Commerce SQL Project</div>
-        <div class="project-desc">
-          Deep-dive data analysis on the Olist Brazilian E-Commerce dataset — 100k+ orders across 8 relational tables. Practicing advanced DDL, DML, DQL, complex JOINs, and row-level window functions with PostgreSQL.
-        </div>
-        <div class="tags">
-          <span class="tag">PostgreSQL</span>
-          <span class="tag">SQL</span>
-          <span class="tag">DDL / DML</span>
-          <span class="tag">Window Functions</span>
-          <span class="tag">100k+ Rows</span>
-        </div>
+        <div class="project-desc">Deep-dive data analysis on the Olist Brazilian E-Commerce dataset — 100k+ orders across 8 relational tables. Practicing advanced DDL, DML, DQL, complex JOINs, and row-level window functions with PostgreSQL.</div>
+        <div class="tags"><span class="tag">PostgreSQL</span><span class="tag">SQL</span><span class="tag">DDL / DML</span><span class="tag">Window Functions</span><span class="tag">100k+ Rows</span></div>
         <div class="project-footer">
           <a href="https://github.com/99-dn" target="_blank" class="project-link">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
@@ -1052,69 +862,43 @@
           </a>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ─── CREDENTIALS ─── -->
 <section id="credentials">
   <div class="container">
     <div class="section-label">Credentials</div>
     <h2 class="section-title">Certifications &amp; Documents_</h2>
-
     <div class="cert-grid">
-
       <div class="cert-card">
         <div class="cert-issuer">Issuing Body</div>
         <div class="cert-name">Certificate Name Placeholder</div>
         <div class="cert-date">// Issued: Month YYYY</div>
         <div class="cert-actions">
-          <button class="cert-btn" onclick="openModal('cert1')">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-            View
-          </button>
-          <a href="#" class="cert-btn" download>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download
-          </a>
+          <button class="cert-btn" onclick="openModal('cert1')"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>View</button>
+          <a href="#" class="cert-btn" download><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download</a>
         </div>
       </div>
-
       <div class="cert-card">
         <div class="cert-issuer">Issuing Body</div>
         <div class="cert-name">Certificate Name Placeholder</div>
         <div class="cert-date">// Issued: Month YYYY</div>
         <div class="cert-actions">
-          <button class="cert-btn" onclick="openModal('cert2')">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-            View
-          </button>
-          <a href="#" class="cert-btn" download>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download
-          </a>
+          <button class="cert-btn" onclick="openModal('cert2')"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>View</button>
+          <a href="#" class="cert-btn" download><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download</a>
         </div>
       </div>
-
       <div class="cert-card">
         <div class="cert-issuer">Issuing Body</div>
         <div class="cert-name">Certificate Name Placeholder</div>
         <div class="cert-date">// Issued: Month YYYY</div>
         <div class="cert-actions">
-          <button class="cert-btn" onclick="openModal('cert3')">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-            View
-          </button>
-          <a href="#" class="cert-btn" download>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download
-          </a>
+          <button class="cert-btn" onclick="openModal('cert3')"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>View</button>
+          <a href="#" class="cert-btn" download><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download</a>
         </div>
       </div>
-
     </div>
-
     <div class="doc-buttons">
       <a href="./assets/docs/cv.pdf" class="btn" download>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -1128,13 +912,11 @@
   </div>
 </section>
 
-<!-- ─── CONTACT ─── -->
 <section id="contact">
   <div class="container">
     <div class="section-label">Contact</div>
     <h2 class="section-title">Get in Touch_</h2>
     <div class="contact-grid">
-
       <div>
         <div class="terminal-box">
           <div class="terminal-header">
@@ -1149,7 +931,6 @@
           <div class="terminal-line"><span class="cmd">TARGET</span> <span class="val">Germany / Switzerland</span></div>
           <div class="terminal-line"><span class="cmd">FOCUS</span> <span class="val">Data &amp; AI Automation</span></div>
         </div>
-
         <div class="social-links">
           <a href="https://github.com/99-dn" target="_blank" class="social-btn">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
@@ -1161,19 +942,18 @@
           </a>
         </div>
       </div>
-
       <div class="contact-form">
         <div class="form-group">
           <label class="form-label">Name</label>
-          <input type="text" class="form-input" placeholder="Your name">
+          <input type="text" class="form-input" name="name" placeholder="Your name">
         </div>
         <div class="form-group">
           <label class="form-label">Email</label>
-          <input type="email" class="form-input" placeholder="your@email.com">
+          <input type="email" class="form-input" name="email" placeholder="your@email.com">
         </div>
         <div class="form-group">
           <label class="form-label">Message</label>
-          <textarea class="form-textarea" placeholder="What's on your mind?"></textarea>
+          <textarea class="form-textarea" name="message" placeholder="What's on your mind?"></textarea>
         </div>
         <button class="btn" onclick="handleFormSubmit(event)">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
@@ -1184,13 +964,10 @@
   </div>
 </section>
 
-<!-- ─── FOOTER ─── -->
 <footer>
   <div class="footer-text">// <span>DNA</span> — Dan Nyarkoh Andoh · Data &amp; AI Automation Engineer — Accra, Ghana 🇬🇭</div>
-
 </footer>
 
-<!-- ─── MODAL ─── -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
   <div class="modal" id="modalContent">
     <button class="modal-close" onclick="closeModal()">[ X ] CLOSE</button>
@@ -1210,7 +987,6 @@
   const canvas = document.getElementById('particles');
   const ctx = canvas.getContext('2d');
   let particles = [];
-  let animId;
 
   function resize() {
     canvas.width = window.innerWidth;
@@ -1258,7 +1034,7 @@
         }
       }
     }
-    animId = requestAnimationFrame(draw);
+    requestAnimationFrame(draw);
   }
 
   window.addEventListener('resize', init);
@@ -1363,18 +1139,58 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') document.getElementById('modalOverlay').classList.remove('open');
 });
 
-// ─── FORM ───
-function handleFormSubmit(e) {
+// ─── FORM — FORMSPREE ───
+async function handleFormSubmit(e) {
   e.preventDefault();
   const btn = e.target;
-  btn.textContent = '[ MESSAGE SENT ✓ ]';
-  btn.style.borderColor = 'var(--accent)';
-  btn.style.background = 'var(--accent-dim)';
-  setTimeout(() => {
-    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message';
-    btn.style.borderColor = '';
-    btn.style.background = '';
-  }, 3000);
+  const form = btn.closest('section').querySelector('.contact-form');
+  const data = {
+    name: form.querySelector('input[name="name"]').value,
+    email: form.querySelector('input[name="email"]').value,
+    message: form.querySelector('textarea[name="message"]').value,
+  };
+
+  btn.textContent = '[ SENDING... ]';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch('https://formspree.io/f/mbdqqqjb', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    if (res.ok) {
+      btn.textContent = '[ MESSAGE SENT ✓ ]';
+      btn.style.borderColor = 'var(--accent)';
+      btn.style.background = 'var(--accent-dim)';
+      form.querySelector('input[name="name"]').value = '';
+      form.querySelector('input[name="email"]').value = '';
+      form.querySelector('textarea[name="message"]').value = '';
+      setTimeout(() => {
+        btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message';
+        btn.style.borderColor = '';
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 3000);
+    } else {
+      btn.textContent = '[ ERROR — TRY AGAIN ]';
+      btn.style.borderColor = '#ff5f57';
+      btn.disabled = false;
+      setTimeout(() => {
+        btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message';
+        btn.style.borderColor = '';
+      }, 3000);
+    }
+  } catch (err) {
+    btn.textContent = '[ ERROR — TRY AGAIN ]';
+    btn.style.borderColor = '#ff5f57';
+    btn.disabled = false;
+    setTimeout(() => {
+      btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message';
+      btn.style.borderColor = '';
+    }, 3000);
+  }
 }
 </script>
 </body>
