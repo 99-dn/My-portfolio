@@ -1,10 +1,9 @@
 # DNA — Portfolio Website
-
 Personal portfolio for **DNA**, a Data & AI Automation Engineer based in Accra, Ghana 🇬🇭.  
 Built to represent precision engineering — dark, terminal-inspired, zero templates.
 
 ## Live Site
-🔗 [99-dn.github.io/portfolio](https://99-dn.github.io/portfolio)
+🔗 https://my-portfolio-two-neon-22.vercel.app
 
 ## Tech Stack
 - HTML5
@@ -45,13 +44,10 @@ portfolio/
 ## Setup
 No build tools needed. Just open `index.html` in a browser.
 
-To deploy on GitHub Pages:
-1. Push repo to GitHub
-2. Go to Settings → Pages
-3. Set source to `main` branch
-4. Site goes live at `https://99-dn.github.io/portfolio`
+## Deployment
+Deployed via Vercel — auto-deploys on every push to main branch.
 
 ## Contact
-- GitHub: [github.com/99-dn](https://github.com/99-dn)
+- Link: https://my-portfolio-two-neon-22.vercel.app
 - Location: Accra, Ghana 🇬🇭
 - Target: Germany 🇩🇪 / Switzerland 🇨🇭
