@@ -24,14 +24,16 @@ Built to represent precision engineering — dark, terminal-inspired, zero templ
 portfolio/
 ├── index.html
 ├── assets/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── main.js
 │   ├── images/
-│   │   └── profile.jpg
+│   │   └── profile.jpeg
 │   └── docs/
 │       ├── cv.pdf
-│       ├── resume.pdf
-│       └── cert-1.pdf
+│       └── resume.pdf
 └── README.md
-
 
 
 ## Sections
